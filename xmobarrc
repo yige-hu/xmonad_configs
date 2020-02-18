@@ -1,7 +1,7 @@
 Config { font = "xft:Droid Sans Mono:size=9:antialias=true"
        , bgColor = "#181818"
        , fgColor = "green"
-       , position = TopW L 95
+       , position = TopW L 100
        , commands = [ Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 5
                     , Run Memory ["-t","Mem: <usedratio>%"] 5
                     , Run Date "%a %b %d %Y %H:%M:%S " "date" 1
