@@ -30,6 +30,8 @@ yigeConfig = do
 		, keys =
 		keys defaultConfig `mappend`
 		\c -> fromList [
+		-- Find multimedia keys with 'xev'
+
 --		((0, 0x1008FF12), toggleMute >> return ()),
 --		((0, 0x1008FF11), lowerVolume 4 >>= alert),
 --		((0, 0x1008FF13), raiseVolume 4 >>= alert)
@@ -42,6 +44,8 @@ yigeConfig = do
 		-- volumedown button
 --		,((0, 0x1008FF11), spawn "pulse-volume.sh decrease" >> getVolume >>= alert)
 		,((0, 0x1008FF11), spawn "pulse-volume.sh decrease")
+
+		,((0, 0x1008ffb2), spawn "amixer set Capture toggle")
 
 		-- keybinding (Shift + Meta + L) is for locking the screen
 		-- put "xscreensaver -no-splash &" in ~/.xsessionrc to run xscreensaver daemon when loading xserver
