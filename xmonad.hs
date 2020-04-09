@@ -45,6 +45,7 @@ yigeConfig = do
 --		,((0, 0x1008FF11), spawn "pulse-volume.sh decrease" >> getVolume >>= alert)
 		,((0, 0x1008FF11), spawn "pulse-volume.sh decrease")
 
+		-- microphone mute/unmute
 		,((0, 0x1008ffb2), spawn "amixer set Capture toggle")
 
 		-- keybinding (Shift + Meta + L) is for locking the screen
