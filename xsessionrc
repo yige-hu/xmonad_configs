@@ -1,0 +1,8 @@
+# ~/.xsessionrc
+
+# Switch to left-handed mouse keys
+xmodmap -e "pointer = 3 2 1"
+
+# Start xscreensaver daemon
+xscreensaver-command -exit
+xscreensaver -no-splash &
